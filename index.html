@@ -888,6 +888,7 @@
         <h3>ข้อมูลผู้ลงทะเบียน</h3>
         <div class="fp">* ที่อยู่ใช้สำหรับออกใบกำกับภาษี / ใบเสร็จรับเงิน</div>
         <div class="checkout-fields">
+          <input type="text" id="hpField" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute!important;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none">
           <div class="field"><label>จำนวนที่นั่ง</label>
             <select id="seatSel">
               <option value="1">1 ท่าน — 10,593.-</option>
@@ -1095,8 +1096,12 @@
   /* ▼▼▼ วางลิงก์ Web App ของ Google Apps Script ตรงนี้ (ดูวิธีในไฟล์ SETUP-form.md) ▼▼▼ */
   var SUBMIT_URL = 'https://script.google.com/macros/s/AKfycbwf0m5d9xkoFWVANvAzuA0F6c2mK4vfMFE28hyzvKRbqWCrQLBMx4B5o4vN9A7zguU8/exec';
   /* ▲▲▲ */
+  /* token กันการยิงมั่ว (ต้องตรงกับใน Code.gs) + จำกัดขนาดสลิป */
+  var FORM_TOKEN = 'LFL-tiger16-9f3Kq7Wm';
+  var MAX_SLIP = 8 * 1024 * 1024; // 8 MB
 
   var form=document.querySelector('form.co-card.form'),
+      hp=document.getElementById('hpField'),
       btn=document.getElementById('submitBtn'),
       seatSel=document.getElementById('seatSel'),
       addr=document.getElementById('fAddress'),
@@ -1158,9 +1163,13 @@
     e.preventDefault();
     if(btn.dataset.busy) return;
     if(!consentChk.checked) return;
+    if(hp && hp.value){ return; }   /* honeypot: บอทกรอก -> เงียบ ๆ ไม่ส่ง */
     var regs=collect();
     var err=validate(regs);
     if(err){ alert('⚠️ '+err); return; }
+    var f=slip.files[0];
+    if(f && f.type && f.type.indexOf('image/')!==0){ alert('กรุณาแนบเป็นไฟล์รูปภาพ (.jpg .png) เท่านั้นค่ะ'); return; }
+    if(f && f.size > MAX_SLIP){ alert('ไฟล์สลิปใหญ่เกินไป (เกิน 8MB)\nกรุณาย่อรูปหรือถ่ายใหม่ค่ะ'); return; }
     if(SUBMIT_URL.indexOf('PASTE_')===0){
       alert('ระบบลงทะเบียนออนไลน์ยังไม่เปิดใช้งาน\nกรุณาติดต่อ 061-373-9892 เพื่อลงทะเบียนค่ะ');
       return;
@@ -1169,7 +1178,8 @@
     setLoading(true);
     readSlip(slip.files[0],function(slipData){
       if(!slipData){ setLoading(false); alert('อ่านไฟล์สลิปไม่สำเร็จ ลองใหม่อีกครั้งค่ะ'); return; }
-      var payload={ seats:seats, total:money(PRICE*seats), taxInvoice:!!taxChk.checked,
+      var payload={ token:FORM_TOKEN, honeypot:(hp?hp.value:''),
+        seats:seats, total:money(PRICE*seats), taxInvoice:!!taxChk.checked,
         address:addr.value.trim(), registrants:regs, slip:slipData, page:'concept-B รุ่น 16' };
       fetch(SUBMIT_URL,{method:'POST',body:JSON.stringify(payload)})
         .then(function(r){return r.json();})
@@ -1190,7 +1200,7 @@
     a.addEventListener('click',function(){
       if(SUBMIT_URL.indexOf('PASTE_')===0) return;
       try{
-        var body=JSON.stringify({action:'lineClick', where:a.getAttribute('data-line')||'line', page:'concept-B รุ่น 16'});
+        var body=JSON.stringify({token:FORM_TOKEN, action:'lineClick', where:a.getAttribute('data-line')||'line', page:'concept-B รุ่น 16'});
         if(navigator.sendBeacon){ navigator.sendBeacon(SUBMIT_URL, new Blob([body],{type:'text/plain'})); }
         else { fetch(SUBMIT_URL,{method:'POST',body:body,keepalive:true}); }
       }catch(e){}
