@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>คอร์สเสือนอนกินด้วยอสังหาฯ จำนอง–ขายฝาก รุ่น 16 | Land for Loan</title>
-<meta name="description" content="เรียนจบใน 1 วัน! คอร์สลงทุนอสังหาฯ จำนอง–ขายฝาก รุ่น 16 สอนโดยมืออาชีพ พร้อมลงมือทำจริง · ค่าเรียนคืนเป็น Voucher ลงทุน 100% · รับ 20 ท่านแรก · 17 ต.ค. 2569 โรงแรมอมารี ดอนเมือง">
+<meta name="description" content="เรียนจบใน 1 วัน! คอร์สลงทุนอสังหาฯ จำนอง–ขายฝาก รุ่น 16 สอนโดยมืออาชีพ พร้อมลงมือทำจริง · ค่าเรียนคืนเป็น Voucher ลงทุน 100% สำหรับ 20 ท่านแรก · 17 ต.ค. 2569 โรงแรมอมารี ดอนเมือง">
 <meta name="theme-color" content="#fb0303">
 <link rel="icon" href="assets/logo-pin.png">
 
@@ -13,14 +13,14 @@
 <meta property="og:locale" content="th_TH">
 <meta property="og:site_name" content="Land for Loan">
 <meta property="og:title" content="คอร์สเสือนอนกินด้วยอสังหาฯ จำนอง–ขายฝาก รุ่น 16">
-<meta property="og:description" content="เรียนจบใน 1 วัน! ค่าเรียนคืนเป็น Voucher ลงทุน 100% · รับ 20 ท่านแรก · 17 ต.ค. 2569 อมารี ดอนเมือง">
+<meta property="og:description" content="เรียนจบใน 1 วัน! ค่าเรียนคืนเป็น Voucher ลงทุน 100% สำหรับ 20 ท่านแรก · 17 ต.ค. 2569 อมารี ดอนเมือง">
 <meta property="og:url" content="https://course.landforloan.co.th/">
 <meta property="og:image" content="https://course.landforloan.co.th/assets/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="คอร์สเสือนอนกินด้วยอสังหาฯ จำนอง–ขายฝาก รุ่น 16">
-<meta name="twitter:description" content="เรียนจบใน 1 วัน! ค่าเรียนคืนเป็น Voucher ลงทุน 100% · รับ 20 ท่านแรก">
+<meta name="twitter:description" content="เรียนจบใน 1 วัน! ค่าเรียนคืนเป็น Voucher ลงทุน 100% สำหรับ 20 ท่านแรก">
 <meta name="twitter:image" content="https://course.landforloan.co.th/assets/og-image.jpg">
 <!-- ▲▲ -->
 <style>
@@ -497,12 +497,15 @@
   .float .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px}
   .float b{font-family:var(--display);font-weight:800;color:var(--red)}
   .float small{display:block;color:var(--ink-2);font-size:.76rem}
-  .float .fl-btns{display:flex;gap:7px;align-items:center}
+  .float .fl-btns{display:flex;gap:7px;align-items:center;flex:none}
   .float .fl-ico{padding:11px 13px;font-size:.95rem;flex:none}
+  .float .fl-book{white-space:nowrap}
+  .float .wrap > div:first-child{min-width:0}
   @media(max-width:640px){.float{display:block}
+    .float .wrap{gap:9px}
     .float .fl-ico{padding:11px 12px}
-    .float .fl-book{padding:11px 15px}
-    .float small{font-size:.72rem}}
+    .float .fl-book{padding:11px 14px}
+    .float small{font-size:.68rem;line-height:1.35}}
   /* before / after */
   .ba-grid{display:grid;grid-template-columns:1fr auto 1fr;gap:18px;align-items:stretch}
   .ba{border-radius:18px;padding:28px 26px;border:1px solid var(--line);transition:transform .18s,box-shadow .18s,background .18s}
@@ -550,6 +553,14 @@
     border:3px solid var(--gold-2);transition:transform .2s,box-shadow .2s}
   .voucher-show img:hover{transform:translateY(-5px) scale(1.01);box-shadow:0 28px 60px rgba(251,3,3,.32)}
   .voucher-show .vs-note{display:block;color:var(--ink-2);font-size:.8rem;margin-top:10px}
+  /* ===== สถานะสิทธิ์ Voucher (ปรับตามยอดลงทะเบียนจริง) ===== */
+  [hidden]{display:none!important}
+  .vch-hot{background:var(--red-soft);border:1.5px dashed var(--red);color:var(--red-deep)}
+  .vch-hot b{color:var(--red)}
+  .announce [data-vch="low"] b{color:#ff8f8f}
+  @keyframes vchPulse{0%,100%{opacity:1}50%{opacity:.45}}
+  .vch-pulse{animation:vchPulse 1.5s ease-in-out infinite}
+  @media(prefers-reduced-motion:reduce){.vch-pulse{animation:none}}
   /* ===== Terms modal ===== */
   .modal-ov{position:fixed;inset:0;z-index:1000;background:rgba(20,10,8,.6);backdrop-filter:blur(3px);
     display:none;align-items:center;justify-content:center;padding:20px}
@@ -574,7 +585,7 @@
 </head>
 <body>
 
-<div class="announce">🔥 เปิดรับ <b>รุ่น 16</b> · รับเพียง <b>20 ท่านแรก</b> ที่ได้ Voucher คืนทุน 100% — เต็มแล้วปิดรับทันที</div>
+<div class="announce"><span data-vch="normal">🔥 เปิดรับ <b>รุ่น 16</b> · เพียง <b>20 ท่านแรก</b> ที่ได้ Voucher คืนทุน 100% — เต็มแล้วปิดรับทันที</span><span data-vch="low" hidden>🔥 <b class="vch-pulse">เหลือ <span class="vchN">0</span> สิทธิ์สุดท้าย!</b> · Voucher คืนทุน 100% — เต็มแล้วปิดรับทันที</span><span data-vch="out" hidden>🔥 เปิดรับสมัคร <b>คอร์สเสือนอนกิน รุ่น 16</b> · เรียน 1 วันเต็ม 17 ต.ค. 2569 — ที่นั่งจำกัด</span></div>
 
 <div class="topbar">
   <div class="wrap">
@@ -595,11 +606,11 @@
       <p class="sub">คอร์สเดียวที่พาคุณสู่โลก <b style="color:var(--gold-2);font-weight:800">Passive Income</b> ด้วยเทคนิคจำนอง-ขายฝาก สอนโดยมืออาชีพ พร้อมลงมือทำจริง!</p>
       <ul class="ticks">
         <li><b>✓</b> เรียนจบใน 1 วัน ครบตั้งแต่พื้นฐานถึงมือโปร</li>
-        <li><b>✓</b> ค่าเรียน turn เป็น Voucher ลงทุนคืน 100%</li>
+        <li data-vch="normal low"><b>✓</b> ค่าเรียน turn เป็น Voucher ลงทุนคืน 100%</li>
         <li><b>✓</b> วิเคราะห์ Case Study ทรัพย์จริง</li>
       </ul>
       <div class="hero-cta">
-        <a href="#form" class="btn btn-red btn-pulse">จองที่นั่ง 20 ท่านแรก</a>
+        <a href="#form" class="btn btn-red btn-pulse">จองที่นั่ง</a>
         <div class="hero-price"><span class="was">ปกติ 15,900.-</span><br><span class="now">เพียง <b>10,593.-</b></span> <small>รวม VAT</small></div>
       </div>
       <div class="countdown" data-deadline="2026-10-10T23:59:59">
@@ -613,7 +624,7 @@
       </div>
     </div>
   </div>
-  <div class="hero-disc"><div class="seal"><span class="v-top">VOUCHER</span><span class="v-num">100%</span><span class="v-bot">คืนค่าเรียนลงทุน</span></div></div>
+  <div class="hero-disc" data-vch="normal low"><div class="seal"><span class="v-top">VOUCHER</span><span class="v-num">100%</span><span class="v-bot">คืนค่าเรียนลงทุน</span></div></div>
 </section>
 
 <div class="trust">
@@ -803,11 +814,12 @@
         <div class="anchor">ราคาปกติ 15,900 บาท</div>
         <div class="price-now">10,593<span> บาท</span></div>
         <div class="price-sub">รวม VAT / ท่าน · เรียน 1 วันเต็ม</div>
-        <div class="voucher">🎟️ ค่าเรียน turn เป็น <b>Voucher ส่วนลดลงทุนคืน 100%</b> · จำกัด 20 ท่านแรก</div>
+        <div class="voucher" data-vch="normal">🎟️ ค่าเรียน turn เป็น <b>Voucher ส่วนลดลงทุนคืน 100%</b> · จำกัด 20 ท่านแรก</div>
+        <div class="voucher vch-hot" data-vch="low" hidden>🔥 <b class="vch-pulse">เหลือ <span class="vchN">0</span> สิทธิ์สุดท้าย!</b> · Voucher ส่วนลดลงทุนคืน 100%</div>
         <ul class="incl">
           <li><i>✓</i> เอกสารประกอบการเรียนครบชุด</li>
           <li><i>✓</i> อาหารว่าง & อาหารกลางวันตลอดวัน</li>
-          <li><i>✓</i> Voucher ส่วนลดลงทุนคืน 100%</li>
+          <li data-vch="normal low"><i>✓</i> Voucher ส่วนลดลงทุนคืน 100%</li>
         </ul>
         <div class="seats">⚠️ เหลือที่นั่งจำนวนจำกัด — เต็มแล้วปิดรับทันที</div>
         <a href="#form" class="btn btn-red btn-pulse" style="margin-top:18px">จองที่นั่งเลย</a>
@@ -816,7 +828,8 @@
     <div class="voucher-show">
       <span class="vs-badge">🎁 ของแถมพิเศษ</span>
       <h3>Voucher ที่คุณจะได้รับ</h3>
-      <p>สมัครวันนี้ รับ <b>Voucher เครดิตลงทุน จำนอง–ขายฝาก มูลค่า 9,900.-</b></p>
+      <p data-vch="normal low">สมัครวันนี้ รับ <b>Voucher เครดิตลงทุน จำนอง–ขายฝาก มูลค่า 9,900.-</b></p>
+      <p data-vch="out" hidden><b>Voucher เครดิตลงทุน จำนอง–ขายฝาก มูลค่า 9,900.-</b> — สงวนสิทธิ์สำหรับ 20 ท่านแรกของแต่ละรุ่น</p>
       <img src="assets/voucher.jpg" alt="Voucher เครดิตลงทุน จำนอง–ขายฝาก มูลค่า 9,900 บาท">
       <small class="vs-note">*เงื่อนไขเป็นไปตามที่บริษัทกำหนด</small>
     </div>
@@ -840,7 +853,7 @@
 <section class="sec final" id="form">
   <div class="wrap">
     <div class="head">
-      <span class="eyebrow" style="color:var(--gold-2)">ลงทะเบียนพร้อมชำระเงิน · เหลือ 20 ที่นั่ง</span>
+      <span class="eyebrow" style="color:var(--gold-2)">ลงทะเบียนพร้อมชำระเงิน</span>
       <h2>ลงทะเบียน & ชำระเงิน <span>ได้ทันที</span></h2>
       <p>กรอกข้อมูล โอนเงิน แล้วแนบสลิป — ยืนยันที่นั่งของคุณให้เสร็จในขั้นตอนเดียว</p>
       <div class="countdown" data-deadline="2026-10-10T23:59:59" style="margin:22px auto 0">
@@ -864,7 +877,8 @@
           <div class="row"><span><small>📅 17 ต.ค. 2569 · 10.00–16.30 น.<br>📍 โรงแรมอมารี ดอนเมือง</small></span><span></span></div>
           <div class="row total"><span>ยอดชำระทั้งสิ้น</span><b id="sumTotal">10,593.-</b></div>
         </div>
-        <div class="voucher-note">🎟️ รับ Voucher ส่วนลดลงทุนคืน 100% (จำกัด 20 ท่านแรก)</div>
+        <div class="voucher-note" data-vch="normal">🎟️ รับ Voucher ส่วนลดลงทุนคืน 100% (จำกัด 20 ท่านแรก)</div>
+        <div class="voucher-note vch-hot" data-vch="low" hidden>🔥 <b class="vch-pulse">เหลือ <span class="vchN">0</span> สิทธิ์สุดท้าย!</b> — ลงทะเบียนตอนนี้เพื่อรับ Voucher คืนทุน 100%</div>
         <div class="bank">
           <div class="bh">
             <img class="scb" src="assets/scb-icon.png" alt="ธนาคารไทยพาณิชย์ SCB">
@@ -933,7 +947,7 @@
 
 <div class="float">
   <div class="wrap">
-    <div><b>10,593.-</b><small>รับเพียง 20 ท่านแรก</small></div>
+    <div><b>10,593.-</b><small data-vch="normal">เพียง 20 ท่านแรก <span style="white-space:nowrap">ที่ได้ Voucher</span></small><small data-vch="low" hidden style="color:var(--red);font-weight:700">🔥 เหลือ <span class="vchN">0</span> สิทธิ์สุดท้าย!</small><small data-vch="out" hidden>เรียน 1 วันเต็ม · 17 ต.ค. 2569</small></div>
     <div class="fl-btns">
       <a href="tel:0613739892" class="btn fl-ico" style="background:#fff;color:var(--red);border:1.5px solid var(--red)" aria-label="โทร">📞</a>
       <a href="https://lin.ee/uyHISOS" target="_blank" rel="noopener" class="btn fl-ico" data-line="แถบล่าง" style="background:#06C755;color:#fff" aria-label="แชท LINE">LINE</a>
@@ -1193,6 +1207,43 @@
         });
     });
   });
+
+  /* ===== สถานะสิทธิ์ Voucher: ถามยอดจริงจากชีต แล้วสลับการแสดงผล =====
+     เหลือ 9-20 = โปรโมทปกติ (ไม่โชว์เลข) · เหลือ 1-8 = โชว์ "เหลือ X สิทธิ์สุดท้าย!" · เหลือ 0 = เงียบเรื่อง Voucher
+     ค่าเริ่มต้นในหน้าเว็บคือโหมดปกติ ถ้าเรียกข้อมูลไม่สำเร็จจะคงโหมดปกติไว้ (ไม่มีเลขปลอม) */
+  (function(){
+    var CAP=20, LOW_AT=8, CACHE_KEY='vchSeats', CACHE_MS=180000;
+    function apply(sold){
+      var remain=Math.max(0, CAP-sold);
+      var tier = remain===0 ? 'out' : (remain<=LOW_AT ? 'low' : 'normal');
+      if(tier==='normal') return;                       /* คงค่าเริ่มต้นในหน้า ไม่ต้องแตะ */
+      document.querySelectorAll('.vchN').forEach(function(n){ n.textContent=remain; });
+      document.querySelectorAll('[data-vch]').forEach(function(el){
+        el.hidden = el.getAttribute('data-vch').split(/\s+/).indexOf(tier) < 0;
+      });
+    }
+    /* โหมดพรีวิว: ใส่ ?vch=<จำนวนที่สมัครแล้ว> ท้าย URL เพื่อดูหน้าตาแต่ละระยะ
+       ใช้ได้เฉพาะตอนเปิดจากเครื่องตัวเอง (localhost) — บนเว็บจริงจะไม่ทำงาน */
+    var isLocal = /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);
+    var pv = new URLSearchParams(location.search).get('vch');
+    if(isLocal && pv!==null && pv!==''){ apply(parseInt(pv,10)||0); return; }
+
+    var cached=null;
+    try{
+      var raw=sessionStorage.getItem(CACHE_KEY);
+      if(raw){ var o=JSON.parse(raw); if(Date.now()-o.t < CACHE_MS) cached=o.n; }
+    }catch(e){}
+    if(cached!==null){ apply(cached); return; }
+    if(SUBMIT_URL.indexOf('PASTE_')===0) return;
+    fetch(SUBMIT_URL,{method:'POST',body:JSON.stringify({token:FORM_TOKEN,action:'getSeatCount'})})
+      .then(function(r){return r.json();})
+      .then(function(res){
+        if(!res||!res.ok||typeof res.count!=='number') return;
+        try{ sessionStorage.setItem(CACHE_KEY, JSON.stringify({n:res.count,t:Date.now()})); }catch(e){}
+        apply(res.count);
+      })
+      .catch(function(){});
+  })();
 
   /* นับคลิกปุ่ม LINE -> ส่งไป Apps Script (ชีต "คลิก LINE") */
   document.querySelectorAll('a[href*="lin.ee"]').forEach(function(a){
