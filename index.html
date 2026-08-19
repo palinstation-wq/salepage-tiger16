@@ -610,7 +610,7 @@
         <li><b>✓</b> วิเคราะห์ Case Study ทรัพย์จริง</li>
       </ul>
       <div class="hero-cta">
-        <a href="#form" class="btn btn-red btn-pulse">จองที่นั่ง</a>
+        <a href="#form" class="btn btn-red btn-pulse" data-vch="normal low">จองที่นั่ง 20 ท่านแรก</a><a href="#form" class="btn btn-red btn-pulse" data-vch="out" hidden>จองที่นั่ง</a>
         <div class="hero-price"><span class="was">ปกติ 15,900.-</span><br><span class="now">เพียง <b>10,593.-</b></span> <small>รวม VAT</small></div>
       </div>
       <div class="countdown" data-deadline="2026-10-10T23:59:59">
@@ -1224,9 +1224,12 @@
     }
     /* โหมดพรีวิว: ใส่ ?vch=<จำนวนที่สมัครแล้ว> ท้าย URL เพื่อดูหน้าตาแต่ละระยะ
        ใช้ได้เฉพาะตอนเปิดจากเครื่องตัวเอง (localhost) — บนเว็บจริงจะไม่ทำงาน */
-    var isLocal = /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);
-    var pv = new URLSearchParams(location.search).get('vch');
-    if(isLocal && pv!==null && pv!==''){ apply(parseInt(pv,10)||0); return; }
+    if(/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname)){
+      try{
+        var pv = new URLSearchParams(location.search).get('vch');
+        if(pv!==null && pv!==''){ apply(parseInt(pv,10)||0); return; }
+      }catch(e){}
+    }
 
     var cached=null;
     try{
