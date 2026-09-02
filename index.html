@@ -23,6 +23,30 @@
 <meta name="twitter:description" content="เรียนจบใน 1 วัน! ค่าเรียนคืนเป็น Voucher ลงทุน 100% สำหรับ 20 ท่านแรก">
 <meta name="twitter:image" content="https://course.landforloan.co.th/assets/og-image.jpg">
 <!-- ▲▲ -->
+
+<!-- ===== Meta Pixel ===== -->
+<script>
+/* ตัวช่วยยิง event — ใช้ได้ทุกที่ในหน้า ถ้า Pixel ยังไม่โหลดก็ไม่ error */
+window.pxTrack=function(ev,p){try{if(window.fbq)fbq('track',ev,p||{});}catch(e){}};
+(function(){
+  /* ไม่ยิง Pixel ตอนเปิดทดสอบในเครื่อง (กันข้อมูลทดสอบปนกับข้อมูลจริงใน Meta) */
+  if(/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname)) return;
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '2090864525136989');
+  fbq('track', 'PageView');
+})();
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2090864525136989&ev=PageView&noscript=1"
+/></noscript>
+<!-- ===== End Meta Pixel ===== -->
 <style>
 /* ===== embedded webfonts (Kanit + Sarabun) ===== */
 /* thai */
@@ -1198,7 +1222,12 @@
         .then(function(r){return r.json();})
         .then(function(res){
           setLoading(false);
-          if(res&&res.ok) showSuccess(res.orderId);
+          if(res&&res.ok){
+            /* Meta Pixel: ลงทะเบียนสำเร็จ = Purchase (มูลค่าจริงตามจำนวนที่นั่ง) */
+            window.pxTrack('Purchase',{value:PRICE*seats,currency:'THB',
+              content_name:'คอร์สเสือนอนกิน รุ่น 16',content_type:'product',num_items:seats});
+            showSuccess(res.orderId);
+          }
           else throw new Error(res&&res.error||'server');
         })
         .catch(function(){
@@ -1259,6 +1288,39 @@
       }catch(e){}
     });
   });
+})();
+</script>
+<script>
+/* ===== Meta Pixel: event ตามพฤติกรรมผู้ใช้ ===== */
+(function(){
+  var COURSE='คอร์สเสือนอนกิน รุ่น 16';
+
+  /* InitiateCheckout — กดปุ่มที่พาไปฟอร์มลงทะเบียน */
+  [].forEach.call(document.querySelectorAll('a[href="#form"]'),function(a){
+    a.addEventListener('click',function(){ window.pxTrack('InitiateCheckout',{content_name:COURSE}); });
+  });
+
+  /* Contact — กดปุ่มโทร หรือ ปุ่มไลน์ */
+  [].forEach.call(document.querySelectorAll('a[href^="tel:"], a[href*="lin.ee"]'),function(a){
+    var ch = a.getAttribute('href').indexOf('tel:')===0 ? 'โทรศัพท์' : 'LINE';
+    a.addEventListener('click',function(){ window.pxTrack('Contact',{content_name:ch}); });
+  });
+
+  /* ViewContent — เลื่อนมาถึงโซนราคา (ยิงครั้งเดียวต่อการเข้าชม) */
+  var price=document.getElementById('price');
+  if(price && 'IntersectionObserver' in window){
+    var done=false;
+    var io=new IntersectionObserver(function(entries){
+      for(var i=0;i<entries.length;i++){
+        if(entries[i].isIntersecting && !done){
+          done=true;
+          window.pxTrack('ViewContent',{content_name:COURSE,value:10593,currency:'THB'});
+          io.disconnect();
+        }
+      }
+    },{threshold:.35});
+    io.observe(price);
+  }
 })();
 </script>
 </body>
