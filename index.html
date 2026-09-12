@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>คอร์สเสือนอนกินด้วยอสังหาฯ จำนอง–ขายฝาก รุ่น 16 | Land for Loan</title>
-<meta name="description" content="เรียนจบใน 1 วัน! คอร์สลงทุนอสังหาฯ จำนอง–ขายฝาก รุ่น 16 สอนโดยมืออาชีพ พร้อมลงมือทำจริง · ค่าเรียนคืนเป็น Voucher ลงทุน 100% สำหรับ 20 ท่านแรก · 17 ต.ค. 2569 โรงแรมอมารี ดอนเมือง">
+<meta name="description" content="เรียนจบใน 1 วัน! คอร์สลงทุนอสังหาฯ จำนอง–ขายฝาก รุ่น 16 สอนโดยมืออาชีพ พร้อมลงมือทำจริง · ค่าเรียนแปลงเป็น Voucher ส่วนลดลงทุน สูงสุด 100% สำหรับ 20 ท่านแรก · 17 ต.ค. 2569 โรงแรมอมารี ดอนเมือง">
 <meta name="theme-color" content="#fb0303">
 <link rel="icon" href="assets/logo-pin.png">
 
@@ -13,14 +13,14 @@
 <meta property="og:locale" content="th_TH">
 <meta property="og:site_name" content="Land for Loan">
 <meta property="og:title" content="คอร์สเสือนอนกินด้วยอสังหาฯ จำนอง–ขายฝาก รุ่น 16">
-<meta property="og:description" content="เรียนจบใน 1 วัน! ค่าเรียนคืนเป็น Voucher ลงทุน 100% สำหรับ 20 ท่านแรก · 17 ต.ค. 2569 อมารี ดอนเมือง">
+<meta property="og:description" content="เรียนจบใน 1 วัน! ค่าเรียนแปลงเป็น Voucher ส่วนลดลงทุน สูงสุด 100% สำหรับ 20 ท่านแรก · 17 ต.ค. 2569 อมารี ดอนเมือง">
 <meta property="og:url" content="https://course.landforloan.co.th/">
 <meta property="og:image" content="https://course.landforloan.co.th/assets/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="คอร์สเสือนอนกินด้วยอสังหาฯ จำนอง–ขายฝาก รุ่น 16">
-<meta name="twitter:description" content="เรียนจบใน 1 วัน! ค่าเรียนคืนเป็น Voucher ลงทุน 100% สำหรับ 20 ท่านแรก">
+<meta name="twitter:description" content="เรียนจบใน 1 วัน! ค่าเรียนแปลงเป็น Voucher ส่วนลดลงทุน สูงสุด 100% สำหรับ 20 ท่านแรก">
 <meta name="twitter:image" content="https://course.landforloan.co.th/assets/og-image.jpg">
 <!-- ▲▲ -->
 
@@ -256,6 +256,13 @@ src="https://www.facebook.com/tr?id=2090864525136989&ev=PageView&noscript=1"
   .cd-u b{font-family:var(--display);font-weight:800;font-size:1.35rem;color:var(--red);display:block;
     font-variant-numeric:tabular-nums}
   .cd-u small{font-size:.66rem;color:var(--ink-2);font-weight:600}
+  /* วัน–เวลา–สถานที่ ในฮีโร่ */
+  .hero-when{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 6px}
+  .hero-when span{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.15);
+    border:1px solid rgba(255,255,255,.32);color:#fff;font-family:var(--display);font-weight:600;
+    font-size:.9rem;padding:8px 14px;border-radius:999px}
+  @media(max-width:480px){.hero-when{gap:6px;margin:16px 0 4px}
+    .hero-when span{font-size:.79rem;padding:6px 11px;gap:5px}}
   .hero-cta{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
   .hero-price{font-family:var(--display)}
   .hero-price .was{color:rgba(255,255,255,.72);text-decoration:line-through;font-size:.95rem}
@@ -302,6 +309,25 @@ src="https://www.facebook.com/tr?id=2090864525136989&ev=PageView&noscript=1"
   .sec-head{text-align:center;max-width:730px;margin:0 auto 44px}
   .sec-head h2{font-size:clamp(1.7rem,3.8vw,2.7rem);color:var(--ink)}
   .sec-head p{color:var(--ink-2);margin-top:12px;font-size:1.05rem}
+  /* ===== สถานที่จัดงาน ===== */
+  .venue{display:grid;grid-template-columns:1fr 1.1fr;gap:26px;align-items:stretch}
+  .venue-info{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px 26px 24px;
+    box-shadow:0 8px 24px rgba(32,20,15,.06)}
+  .venue-info .v-photo{border-radius:12px;overflow:hidden;margin:0 0 18px;background:var(--paper)}
+  .venue-info .v-photo img{width:100%;height:200px;object-fit:cover;object-position:center 45%;display:block}
+  .venue-info h3{font-family:var(--display);font-size:1.25rem;color:var(--ink);line-height:1.4}
+  .venue-info .v-addr{color:var(--ink-2);margin:8px 0 18px;font-size:.95rem;line-height:1.7}
+  .v-points{list-style:none;padding:0;margin:0 0 22px;display:flex;flex-direction:column;gap:13px}
+  .v-points li{display:flex;gap:11px;align-items:flex-start;font-size:.95rem;line-height:1.6}
+  .v-points i{font-style:normal;font-size:1.15rem;flex:none;line-height:1.4}
+  .v-points b{font-family:var(--display);color:var(--red)}
+  .venue-info .btn{width:100%;text-align:center}
+  .venue-map{border-radius:16px;overflow:hidden;border:1px solid var(--line);
+    box-shadow:0 8px 24px rgba(32,20,15,.06);min-height:340px;background:var(--cream)}
+  .venue-map iframe{width:100%;height:100%;min-height:340px;border:0;display:block}
+  @media(max-width:860px){.venue{grid-template-columns:1fr;gap:18px}
+    .venue-info{padding:22px 20px}.venue-map{min-height:270px}.venue-map iframe{min-height:270px}
+    .venue-info .v-photo img{height:170px}}
   .kicker{width:56px;height:4px;background:var(--red);border-radius:3px;margin:0 auto 16px}
 
   /* pain */
@@ -397,7 +423,10 @@ src="https://www.facebook.com/tr?id=2090864525136989&ev=PageView&noscript=1"
   .anchor{color:#b7a99e;text-decoration:line-through;font-size:1.05rem}
   .price-now{font-family:var(--display);font-weight:800;font-size:3.6rem;color:var(--red);line-height:1}
   .price-now span{font-size:1.2rem;color:var(--ink)}
-  .price-sub{color:var(--ink-2);margin:6px 0 20px}
+  .price-sub{color:var(--ink-2);margin:6px 0 12px}
+  .price-when{font-family:var(--display);font-weight:600;color:var(--ink);font-size:.92rem;
+    line-height:1.65;margin:0 0 18px;padding:11px 14px;background:var(--paper);
+    border:1px solid var(--line);border-radius:10px;display:inline-block}
   .voucher{background:var(--gold-soft);border:1.5px dashed var(--gold);border-radius:14px;padding:16px 18px;
     color:#7a5b12;font-family:var(--display);font-weight:600;margin-bottom:20px}
   .voucher b{color:var(--red)}
@@ -503,6 +532,9 @@ src="https://www.facebook.com/tr?id=2090864525136989&ev=PageView&noscript=1"
   .form .btn{width:100%;margin-top:16px}
   .form .btn:disabled{opacity:.45;cursor:not-allowed;filter:grayscale(.35);box-shadow:none;transform:none}
   .submit-hint{text-align:center;color:var(--red-deep);font-size:.83rem;margin-top:9px;font-family:var(--display)}
+  .policy-note{background:var(--red-soft);border:1px solid #f3c9c9;border-radius:10px;
+    padding:11px 14px;margin:16px 0 0;font-size:.84rem;line-height:1.65;color:var(--ink)}
+  .policy-note b{color:var(--red-deep)}
   .spin{display:inline-block;width:15px;height:15px;border:2.5px solid rgba(255,255,255,.4);border-top-color:#fff;
     border-radius:50%;animation:spin .7s linear infinite;vertical-align:-2px;margin-right:6px}
   @keyframes spin{to{transform:rotate(360deg)}}
@@ -510,6 +542,12 @@ src="https://www.facebook.com/tr?id=2090864525136989&ev=PageView&noscript=1"
     display:grid;place-items:center;font-size:2.2rem;margin:0 auto 14px;box-shadow:0 12px 30px rgba(28,125,67,.35)}
   .ok-order{display:inline-block;background:var(--gold-soft);border:1px dashed var(--gold);border-radius:8px;
     padding:4px 12px;font-family:var(--display);font-weight:700;color:var(--red-deep);margin:4px 0}
+  .ok-course{background:var(--paper);border:1px solid var(--line);border-radius:12px;
+    padding:14px 16px;margin:16px 0 0;line-height:1.7}
+  .ok-course small{display:block;font-family:var(--display);font-weight:700;font-size:.7rem;
+    letter-spacing:.12em;color:var(--red)}
+  .ok-course b{display:block;font-family:var(--display);font-size:1.02rem;color:var(--ink);margin:3px 0 9px;line-height:1.4}
+  .ok-course span{display:block;font-size:.89rem;color:var(--ink-2)}
   .safe{text-align:center;color:var(--ink-2);font-size:.8rem;margin-top:12px}
   @media(max-width:860px){.checkout{grid-template-columns:1fr}}
   @media(max-width:480px){.fgrid{grid-template-columns:1fr}}
@@ -601,6 +639,12 @@ src="https://www.facebook.com/tr?id=2090864525136989&ev=PageView&noscript=1"
   .modal-body{padding:22px;overflow-y:auto;color:var(--ink);line-height:1.75;font-size:.92rem}
   .modal-body p{margin:0 0 14px}
   .modal-body p:last-child{margin-bottom:0}
+  .modal-body .t-head{font-family:var(--display);font-weight:800;font-size:1rem;color:var(--red);
+    margin:0 0 10px;padding-bottom:7px;border-bottom:1px solid var(--line)}
+  .modal-body .t-head + p,.modal-body .t-list + .t-head{margin-top:0}
+  .modal-body .t-list{margin:0 0 22px;padding-left:1.25rem;display:flex;flex-direction:column;gap:10px}
+  .modal-body .t-list li{padding-left:2px}
+  .modal-body .t-list::marker,.modal-body .t-list li::marker{color:var(--red);font-weight:700}
   .modal-body b{color:var(--red-deep)}
   .modal-foot{padding:14px 22px;border-top:1px solid var(--line);flex:none}
   .modal-foot button{width:100%;padding:12px;border:none;border-radius:10px;background:var(--red);color:#fff;
@@ -609,7 +653,7 @@ src="https://www.facebook.com/tr?id=2090864525136989&ev=PageView&noscript=1"
 </head>
 <body>
 
-<div class="announce"><span data-vch="normal">🔥 เปิดรับ <b>รุ่น 16</b> · เพียง <b>20 ท่านแรก</b> ที่ได้ Voucher คืนทุน 100% — เต็มแล้วปิดรับทันที</span><span data-vch="low" hidden>🔥 <b class="vch-pulse">เหลือ <span class="vchN">0</span> สิทธิ์สุดท้าย!</b> · Voucher คืนทุน 100% — เต็มแล้วปิดรับทันที</span><span data-vch="out" hidden>🔥 เปิดรับสมัคร <b>คอร์สเสือนอนกิน รุ่น 16</b> · เรียน 1 วันเต็ม 17 ต.ค. 2569 — ที่นั่งจำกัด</span></div>
+<div class="announce"><span data-vch="normal">🔥 เปิดรับ <b>รุ่น 16</b> · เพียง <b>20 ท่านแรก</b> ที่ได้ Voucher ส่วนลดลงทุน สูงสุด 100% — เต็มแล้วปิดรับทันที</span><span data-vch="low" hidden>🔥 <b class="vch-pulse">เหลือ <span class="vchN">0</span> สิทธิ์สุดท้าย!</b> · Voucher ส่วนลดลงทุน สูงสุด 100% — เต็มแล้วปิดรับทันที</span><span data-vch="out" hidden>🔥 เปิดรับสมัคร <b>คอร์สเสือนอนกิน รุ่น 16</b> · เรียน 1 วันเต็ม 17 ต.ค. 2569 — ที่นั่งจำกัด</span></div>
 
 <div class="topbar">
   <div class="wrap">
@@ -630,15 +674,20 @@ src="https://www.facebook.com/tr?id=2090864525136989&ev=PageView&noscript=1"
       <p class="sub">คอร์สเดียวที่พาคุณสู่โลก <b style="color:var(--gold-2);font-weight:800">Passive Income</b> ด้วยเทคนิคจำนอง-ขายฝาก สอนโดยมืออาชีพ พร้อมลงมือทำจริง!</p>
       <ul class="ticks">
         <li><b>✓</b> เรียนจบใน 1 วัน ครบตั้งแต่พื้นฐานถึงมือโปร</li>
-        <li data-vch="normal low"><b>✓</b> ค่าเรียน turn เป็น Voucher ลงทุนคืน 100%</li>
+        <li data-vch="normal low"><b>✓</b> ค่าเรียน turn เป็น Voucher ส่วนลดลงทุน สูงสุด 100%</li>
         <li><b>✓</b> วิเคราะห์ Case Study ทรัพย์จริง</li>
       </ul>
+      <div class="hero-when">
+        <span>📅 เสาร์ที่ 17 ตุลาคม 2569</span>
+        <span>🕙 10.00–16.30 น.</span>
+        <span>📍 โรงแรมอมารี ดอนเมือง</span>
+      </div>
       <div class="hero-cta">
         <a href="#form" class="btn btn-red btn-pulse" data-vch="normal low">จองที่นั่ง 20 ท่านแรก</a><a href="#form" class="btn btn-red btn-pulse" data-vch="out" hidden>จองที่นั่ง</a>
         <div class="hero-price"><span class="was">ปกติ 15,900.-</span><br><span class="now">เพียง <b>10,593.-</b></span> <small>รวม VAT</small></div>
       </div>
-      <div class="countdown" data-deadline="2026-10-10T23:59:59">
-        <span class="cd-label">⏳ ปิดรับจองใน</span>
+      <div class="countdown" data-deadline="2026-10-15T23:59:59">
+        <span class="cd-label">⏳ ปิดรับจอง 15 ต.ค. 2569 — เหลืออีก</span>
         <div class="cd-units">
           <div class="cd-u"><b data-cd="d">00</b><small>วัน</small></div>
           <div class="cd-u"><b data-cd="h">00</b><small>ชม.</small></div>
@@ -648,7 +697,7 @@ src="https://www.facebook.com/tr?id=2090864525136989&ev=PageView&noscript=1"
       </div>
     </div>
   </div>
-  <div class="hero-disc" data-vch="normal low"><div class="seal"><span class="v-top">VOUCHER</span><span class="v-num">100%</span><span class="v-bot">คืนค่าเรียนลงทุน</span></div></div>
+  <div class="hero-disc" data-vch="normal low"><div class="seal"><span class="v-top">VOUCHER</span><span class="v-num">100%</span><span class="v-bot">ส่วนลดลงทุน</span></div></div>
 </section>
 
 <div class="trust">
@@ -838,20 +887,23 @@ src="https://www.facebook.com/tr?id=2090864525136989&ev=PageView&noscript=1"
         <div class="anchor">ราคาปกติ 15,900 บาท</div>
         <div class="price-now">10,593<span> บาท</span></div>
         <div class="price-sub">รวม VAT / ท่าน · เรียน 1 วันเต็ม</div>
-        <div class="voucher" data-vch="normal">🎟️ ค่าเรียน turn เป็น <b>Voucher ส่วนลดลงทุนคืน 100%</b> · จำกัด 20 ท่านแรก</div>
-        <div class="voucher vch-hot" data-vch="low" hidden>🔥 <b class="vch-pulse">เหลือ <span class="vchN">0</span> สิทธิ์สุดท้าย!</b> · Voucher ส่วนลดลงทุนคืน 100%</div>
+        <div class="price-when">📅 เสาร์ที่ 17 ต.ค. 2569 · 10.00–16.30 น.<br>📍 โรงแรมอมารี ดอนเมือง</div>
+        <div class="voucher" data-vch="normal">🎟️ ค่าเรียน turn เป็น <b>Voucher ส่วนลดลงทุน สูงสุด 100%</b> · จำกัด 20 ท่านแรก</div>
+        <div class="voucher vch-hot" data-vch="low" hidden>🔥 <b class="vch-pulse">เหลือ <span class="vchN">0</span> สิทธิ์สุดท้าย!</b> · Voucher ส่วนลดลงทุน สูงสุด 100%</div>
         <ul class="incl">
           <li><i>✓</i> เอกสารประกอบการเรียนครบชุด</li>
           <li><i>✓</i> อาหารว่าง & อาหารกลางวันตลอดวัน</li>
-          <li data-vch="normal low"><i>✓</i> Voucher ส่วนลดลงทุนคืน 100%</li>
+          <li data-vch="normal low"><i>✓</i> Voucher ส่วนลดลงทุน สูงสุด 100%</li>
         </ul>
         <div class="seats">⚠️ เหลือที่นั่งจำนวนจำกัด — เต็มแล้วปิดรับทันที</div>
         <a href="#form" class="btn btn-red btn-pulse" style="margin-top:18px">จองที่นั่งเลย</a>
       </div>
     </div>
     <div class="voucher-show">
-      <span class="vs-badge">🎁 ของแถมพิเศษ</span>
-      <h3>Voucher ที่คุณจะได้รับ</h3>
+      <span class="vs-badge" data-vch="normal low">🎁 ของแถมพิเศษ</span>
+      <span class="vs-badge" data-vch="out" hidden>🎟️ สิทธิพิเศษของแต่ละรุ่น</span>
+      <h3 data-vch="normal low">Voucher ที่คุณจะได้รับ</h3>
+      <h3 data-vch="out" hidden>Voucher ส่วนลดลงทุน</h3>
       <p data-vch="normal low">สมัครวันนี้ รับ <b>Voucher เครดิตลงทุน จำนอง–ขายฝาก มูลค่า 9,900.-</b></p>
       <p data-vch="out" hidden><b>Voucher เครดิตลงทุน จำนอง–ขายฝาก มูลค่า 9,900.-</b> — สงวนสิทธิ์สำหรับ 20 ท่านแรกของแต่ละรุ่น</p>
       <img src="assets/voucher.jpg" alt="Voucher เครดิตลงทุน จำนอง–ขายฝาก มูลค่า 9,900 บาท">
@@ -866,9 +918,40 @@ src="https://www.facebook.com/tr?id=2090864525136989&ev=PageView&noscript=1"
     <div class="sec-head"><div class="kicker"></div><span class="eyebrow">คำถามที่พบบ่อย</span><h2>ยังลังเลอยู่ใช่ไหม?</h2></div>
     <div class="faq">
       <details open><summary>ไม่มีพื้นฐานเลย เรียนได้ไหม?</summary><p>ได้แน่นอน คอร์สเริ่มจาก 0 สอนตั้งแต่พื้นฐานถึงระดับมืออาชีพ ไม่ต้องมีความรู้มาก่อน</p></details>
-      <details><summary>Voucher คืนทุน 100% ใช้ยังไง?</summary><p>ค่าเรียนสามารถ <b>TURN เป็น Voucher ส่วนลดสำหรับการลงทุน มูลค่าสูงสุด 100%</b> — สำหรับผู้ที่เรียนจบแล้วเข้ามาเป็นนายทุนกับ Land for Loan สามารถนำ Voucher นี้ไปใช้เป็นส่วนลดในขั้นตอนการทำธุรกรรมได้ (จำกัด 20 ท่านแรก · เงื่อนไขเป็นไปตามที่บริษัทกำหนด)</p></details>
-      <details><summary>เรียนวันเดียวพอจริงเหรอ?</summary><p>เนื้อหาเข้มข้นครบทุกหัวข้อใน 1 วัน พร้อม Case Study จริง ช่วงถาม-ตอบ และสามารถปรึกษาได้อย่างต่อเนื่อง</p></details>
-      <details><summary>ชำระเงินอย่างไร?</summary><p>สามารถโอนเงิน 10,593.- เข้าบัญชี กรอกข้อมูลผู้เรียนในแบบฟอร์ม แนบสลิปการโอน แล้วกดยืนยัน</p></details>
+      <details><summary>Voucher ส่วนลดลงทุน สูงสุด 100% ใช้ยังไง?</summary><p>ค่าเรียนสามารถ <b>TURN เป็น Voucher ส่วนลดสำหรับการลงทุน มูลค่า 9,900 บาท</b> (เท่ากับค่าเรียนก่อน VAT — ไม่รวม VAT 693 บาท) — สำหรับผู้ที่เรียนจบแล้วเข้ามาเป็นนายทุนกับ Land for Loan สามารถนำ Voucher นี้ไปใช้เป็นส่วนลดในขั้นตอนการทำธุรกรรมได้ (จำกัด 20 ท่านแรก · เงื่อนไขเป็นไปตามที่บริษัทกำหนด)</p></details>
+      <details><summary>เรียนวันเดียวพอจริงเหรอ?</summary><p>เนื้อหาเข้มข้นครบทุกหัวข้อใน 1 วัน พร้อม Case Study จริง ช่วงถาม-ตอบ และสามารถปรึกษาได้อย่างต่อเนื่อง — ติดต่อทีมงานได้โดยตรงทาง <b>LINE @landforloan-invest</b> หรือโทร 061-373-9892 (<b>ไม่มีกลุ่มไลน์รวมของรุ่น</b>)</p></details>
+      <details><summary>ถ้าติดธุระ ไปเรียนไม่ได้ ทำอย่างไร?</summary><p>แจ้งเลื่อนไปรุ่นถัดไปได้ โดย<b>แจ้งล่วงหน้าก่อนวันสัมมนาอย่างน้อย 5 วัน</b> เพื่อให้ทีมงานดำเนินการเปลี่ยนแปลงข้อมูลให้ (ไม่มีค่าใช้จ่าย) · กรณี<b>ไม่แจ้งล่วงหน้า แล้วต้องการเลื่อนไปเรียนรุ่นถัดไป</b> ทางสถาบันขอสงวนสิทธิ์คิดค่าเสียหาย <b>3,000 บาท</b><br>หรือหากต้องการ<b>ให้ท่านอื่นมาเรียนแทน</b> สามารถทำได้ เพียงแจ้งทีมงานหน้างานว่ามาแทนท่านใด<br><b>หมายเหตุ:</b> เมื่อชำระเงินแล้วขอสงวนสิทธิ์ไม่คืนเงินทุกกรณี แต่เลื่อนรุ่นหรือเปลี่ยนตัวผู้เข้าเรียนได้</p></details>
+      <details><summary>มีใบประกาศนียบัตรให้ไหม?</summary><p>คอร์สนี้<b>ไม่มีใบประกาศนียบัตร</b> แต่ทางสถาบันเตรียม<b>หนังสือเรียนและเอกสารประกอบครบชุด</b>ให้ผู้เข้าเรียนทุกท่านนำกลับไปใช้ต่อได้</p></details>
+      <details><summary>ได้รับใบเสร็จ/ใบกำกับภาษีเมื่อไหร่?</summary><p>หลังลงทะเบียน ทีมงานจะตรวจสอบการชำระเงินและ<b>ติดต่อกลับทางอีเมลภายใน 2 วัน</b> เพื่อยืนยันสิทธิ์ที่นั่ง<br><b>ใบเสร็จรับเงิน/ใบกำกับภาษี ทางสถาบันจะจัดส่งทางไปรษณีย์เท่านั้น</b> (ไม่มีรับหน้างาน) ตามชื่อ-ที่อยู่ที่กรอกไว้ในแบบฟอร์ม — กรุณากรอกที่อยู่ให้ถูกต้องครบถ้วน</p></details>
+      <details><summary>ต้องเตรียมอะไรไปบ้าง?</summary><p>ทางสถาบันเตรียม<b>อุปกรณ์การเรียนให้ครบทุกท่าน</b> ทั้งหนังสือเรียน กระดาษ และดินสอ พร้อมอาหารว่างและอาหารกลางวัน · <b>หมายเหตุ:</b> ทางโรงแรมไม่มีปลั๊กสำหรับเสียบชาร์จแบต Notebook</p></details>
+      <details><summary>ชำระเงินอย่างไร?</summary><p>โอนเงิน <b>10,593.- ต่อ 1 ท่าน</b> (สมัครหลายท่านคูณตามจำนวนที่นั่ง) เข้าบัญชี <b>ธนาคารไทยพาณิชย์ (SCB) เลขที่ 136-269122-6</b> ชื่อบัญชี <b>บริษัท แลนด์ ฟอร์ โลน จำกัด</b> จากนั้นกรอกข้อมูลผู้เรียนในแบบฟอร์ม แนบสลิปการโอน แล้วกดยืนยัน</p></details>
+      <details><summary>ปิดรับสมัครเมื่อไหร่?</summary><p>ปิดรับลงทะเบียน <b>วันที่ 15 ตุลาคม 2569</b> (ก่อนวันเรียน 2 วัน) เพื่อให้ทีมงานเตรียมเอกสารและอุปกรณ์การเรียนให้ครบทุกท่าน · หากที่นั่งเต็มก่อนกำหนด ทางสถาบันขอปิดรับทันที</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- VENUE -->
+<section class="sec" id="venue">
+  <div class="wrap">
+    <div class="sec-head"><div class="kicker"></div><span class="eyebrow">สถานที่จัดงาน</span><h2>เดินทางสะดวก <span class="red">ติดสนามบินดอนเมือง</span></h2></div>
+    <div class="venue">
+      <div class="venue-info">
+        <div class="v-photo"><img src="assets/venue-hotel.jpg" alt="โรงแรมอมารี ดอนเมือง แอร์พอร์ต กรุงเทพฯ สถานที่จัดสัมมนา" loading="lazy"></div>
+        <h3>โรงแรมอมารี ดอนเมือง แอร์พอร์ต กรุงเทพฯ</h3>
+        <p class="v-addr">333 ถนนเชิดวุฒากาศ แขวงสีกัน<br>เขตดอนเมือง กรุงเทพฯ 10210</p>
+        <ul class="v-points">
+          <li><i>🚶</i><span><b>เดินจากสนามบินดอนเมืองแค่ 7 นาที</b> — ผ่านทางเชื่อมอาคาร 1 ชั้น 2 (ระหว่างประตู 5–6)</span></li>
+          <li><i>📅</i><span><b>เสาร์ที่ 17 ตุลาคม 2569</b> · ลงทะเบียนหน้างาน <b>09.30–10.00 น.</b> · เรียน 10.00–16.30 น.</span></li>
+          <li><i>🅿️</i><span><b>มีที่จอดรถให้ผู้เข้าเรียน</b> ที่โรงแรม</span></li>
+          <li><i>💺</i><span>เรียนในห้องประชุมโรงแรม บรรยากาศสบาย พร้อมอาหารว่างและอาหารกลางวัน</span></li>
+        </ul>
+        <a class="btn btn-red" href="https://www.google.com/maps/dir/?api=1&destination=Amari+Don+Muang+Airport+Bangkok" target="_blank" rel="noopener">🧭 เปิดแผนที่นำทาง</a>
+      </div>
+      <div class="venue-map">
+        <iframe src="https://maps.google.com/maps?q=Amari%20Don%20Muang%20Airport%20Bangkok&output=embed&hl=th"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen
+          title="แผนที่โรงแรมอมารี ดอนเมือง แอร์พอร์ต"></iframe>
+      </div>
     </div>
   </div>
 </section>
@@ -880,8 +963,8 @@ src="https://www.facebook.com/tr?id=2090864525136989&ev=PageView&noscript=1"
       <span class="eyebrow" style="color:var(--gold-2)">ลงทะเบียนพร้อมชำระเงิน</span>
       <h2>ลงทะเบียน & ชำระเงิน <span>ได้ทันที</span></h2>
       <p>กรอกข้อมูล โอนเงิน แล้วแนบสลิป — ยืนยันที่นั่งของคุณให้เสร็จในขั้นตอนเดียว</p>
-      <div class="countdown" data-deadline="2026-10-10T23:59:59" style="margin:22px auto 0">
-        <span class="cd-label">⏳ ปิดรับจองใน</span>
+      <div class="countdown" data-deadline="2026-10-15T23:59:59" style="margin:22px auto 0">
+        <span class="cd-label">⏳ ปิดรับจอง 15 ต.ค. 2569 — เหลืออีก</span>
         <div class="cd-units">
           <div class="cd-u"><b data-cd="d">00</b><small>วัน</small></div>
           <div class="cd-u"><b data-cd="h">00</b><small>ชม.</small></div>
@@ -901,8 +984,8 @@ src="https://www.facebook.com/tr?id=2090864525136989&ev=PageView&noscript=1"
           <div class="row"><span><small>📅 17 ต.ค. 2569 · 10.00–16.30 น.<br>📍 โรงแรมอมารี ดอนเมือง</small></span><span></span></div>
           <div class="row total"><span>ยอดชำระทั้งสิ้น</span><b id="sumTotal">10,593.-</b></div>
         </div>
-        <div class="voucher-note" data-vch="normal">🎟️ รับ Voucher ส่วนลดลงทุนคืน 100% (จำกัด 20 ท่านแรก)</div>
-        <div class="voucher-note vch-hot" data-vch="low" hidden>🔥 <b class="vch-pulse">เหลือ <span class="vchN">0</span> สิทธิ์สุดท้าย!</b> — ลงทะเบียนตอนนี้เพื่อรับ Voucher คืนทุน 100%</div>
+        <div class="voucher-note" data-vch="normal">🎟️ รับ Voucher ส่วนลดลงทุน สูงสุด 100% (จำกัด 20 ท่านแรก)</div>
+        <div class="voucher-note vch-hot" data-vch="low" hidden>🔥 <b class="vch-pulse">เหลือ <span class="vchN">0</span> สิทธิ์สุดท้าย!</b> — ลงทะเบียนตอนนี้เพื่อรับ Voucher ส่วนลดลงทุน สูงสุด 100%</div>
         <div class="bank">
           <div class="bh">
             <img class="scb" src="assets/scb-icon.png" alt="ธนาคารไทยพาณิชย์ SCB">
@@ -917,7 +1000,7 @@ src="https://www.facebook.com/tr?id=2090864525136989&ev=PageView&noscript=1"
             <li>โอนเงิน <b id="stepAmt">10,593.-</b> เข้าบัญชีด้านบน</li>
             <li>กรอกข้อมูลผู้เรียนในแบบฟอร์มด้านขวา</li>
             <li>แนบสลิปการโอน แล้วกดยืนยัน</li>
-            <li>ทีมงานตรวจสอบและส่งใบเสร็จ/ใบกำกับภาษีให้ทางอีเมล</li>
+            <li>ทีมงานตรวจสอบและติดต่อกลับ<b>ทางอีเมลภายใน 2 วัน</b> · ใบเสร็จ/ใบกำกับภาษีจัดส่ง<b>ทางไปรษณีย์</b></li>
           </ol>
         </div>
       </div>
@@ -953,6 +1036,7 @@ src="https://www.facebook.com/tr?id=2090864525136989&ev=PageView&noscript=1"
             <label class="upload"><input type="file" id="fSlip" accept="image/*" style="display:none"><b id="slipLabel">📎 คลิกเพื่อแนบสลิป</b><br><span id="slipSub">รองรับไฟล์ภาพ .jpg .png</span></label></div>
           <label class="taxopt"><input type="checkbox" id="taxChk"> <span>🧾 ต้องการใบกำกับภาษี <small>(ออกให้โดยใช้ชื่อ/ที่อยู่ที่กรอกด้านบน)</small></span></label>
         </div>
+        <div class="policy-note">⚠️ <b>กรณีเลื่อน/ไม่มาเรียน:</b> แจ้งล่วงหน้าก่อนวันสัมมนาอย่างน้อย <b>5 วัน</b> เลื่อนไปรุ่นถัดไปได้โดยไม่มีค่าใช้จ่าย · หาก<b>ไม่แจ้งล่วงหน้าแล้วต้องการเลื่อนรุ่น</b> คิดค่าเสียหาย <b>3,000 บาท</b> · ชำระแล้วไม่คืนเงินทุกกรณี</div>
         <label class="consent"><input type="checkbox" id="consentChk"> ข้าพเจ้ายอมรับ <a href="#" style="color:var(--red)" onclick="openTerms(event)">เงื่อนไข</a> และยินยอมให้เก็บข้อมูลตามนโยบาย PDPA เพื่อการลงทะเบียนและออกเอกสาร</label>
         <button class="btn btn-red" id="submitBtn" disabled>ยืนยันการลงทะเบียน & แจ้งชำระเงิน 🔒</button>
         <div class="submit-hint" id="submitHint">⚠️ กรุณาติ๊กยอมรับเงื่อนไข PDPA ด้านบนก่อน จึงจะกดยืนยันได้</div>
@@ -965,7 +1049,8 @@ src="https://www.facebook.com/tr?id=2090864525136989&ev=PageView&noscript=1"
 <footer>
   <img src="assets/logo-full.png" alt="Land for Loan" style="width:186px;margin:0 auto 14px;background:#fff;padding:14px 20px;border-radius:14px">
   <div>บริษัท แลนด์ ฟอร์ โลน จำกัด · เสือนอนกินด้วยอสังหาฯ จำนอง–ขายฝาก รุ่น 16</div>
-  <div style="margin-top:8px;font-family:var(--display);color:var(--gold-2);font-size:1rem">📞 ติดต่อสอบถาม/สมัคร: <a href="tel:0613739892" style="color:var(--gold-2)">061-373-9892</a></div>
+  <div style="margin-top:4px;opacity:.75;font-size:.82rem">บริษัท แลนด์ ฟอร์ โลน จำกัด (สำนักงานใหญ่) · เลขประจำตัวผู้เสียภาษี 0105566003001</div>
+  <div style="margin-top:8px;font-family:var(--display);color:var(--gold-2);font-size:1rem">📞 ติดต่อสอบถาม/สมัคร: <a href="tel:0613739892" style="color:var(--gold-2)">061-373-9892</a> (แอดมินริน)</div>
   <div style="margin-top:6px;font-family:var(--display);font-size:1rem"><a href="https://lin.ee/uyHISOS" target="_blank" rel="noopener" data-line="footer" style="display:inline-flex;align-items:center;gap:8px;background:#06C755;color:#fff;padding:8px 18px;border-radius:999px;text-decoration:none;font-weight:700">💬 แอดไลน์ @landforloan-invest</a></div>
 </footer>
 
@@ -1080,10 +1165,23 @@ src="https://www.facebook.com/tr?id=2090864525136989&ev=PageView&noscript=1"
 <div class="modal-ov" id="termsModal" onclick="if(event.target===this)closeTerms()">
   <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="termsTitle">
     <div class="modal-head">
-      <h3 id="termsTitle">🔒 เงื่อนไข & นโยบายความเป็นส่วนตัว (PDPA)</h3>
+      <h3 id="termsTitle">🔒 เงื่อนไขการให้บริการ & นโยบายความเป็นส่วนตัว</h3>
       <button type="button" class="modal-x" onclick="closeTerms()" aria-label="ปิด">✕</button>
     </div>
     <div class="modal-body">
+      <h4 class="t-head">1. เงื่อนไขการให้บริการ</h4>
+      <ol class="t-list">
+        <li><b>การชำระเงินและยืนยันสิทธิ์</b> — เมื่อโอนเงินและแนบสลิปในแบบฟอร์มแล้ว ถือว่าการลงทะเบียนอยู่ระหว่างตรวจสอบ ทีมงานจะตรวจสอบและติดต่อกลับทางอีเมลภายใน 2 วัน เพื่อยืนยันสิทธิ์ที่นั่ง</li>
+        <li><b>การคืนเงิน</b> — เมื่อชำระเงินแล้ว <b>ขอสงวนสิทธิ์ไม่คืนเงินทุกกรณี</b> แต่สามารถเลื่อนไปรุ่นถัดไปหรือเปลี่ยนตัวผู้เข้าเรียนได้ตามข้อ 3 และ 4</li>
+        <li><b>การเลื่อนเข้าเรียน</b> — กรณีไม่สามารถเข้าเรียนได้ กรุณาแจ้งล่วงหน้าก่อนวันสัมมนา <b>อย่างน้อย 5 วัน</b> เพื่อเลื่อนไปรุ่นถัดไปโดยไม่มีค่าใช้จ่าย · หาก<b>ไม่แจ้งล่วงหน้า แล้วต้องการเลื่อนไปเรียนรุ่นถัดไป</b> ทางสถาบันขอสงวนสิทธิ์คิด<b>ค่าเสียหาย 3,000 บาท</b></li>
+        <li><b>การเปลี่ยนตัวผู้เข้าเรียน</b> — สามารถให้ท่านอื่นเข้าเรียนแทนได้ โดยแจ้งทีมงานหน้างานว่ามาแทนท่านใด</li>
+        <li><b>สิทธิ์ Voucher</b> — Voucher ส่วนลดสำหรับการลงทุน <b>มูลค่า 9,900 บาท</b> (เท่ากับค่าเรียนก่อนภาษีมูลค่าเพิ่ม <b>ไม่รวม VAT 693 บาท</b>) สงวนสิทธิ์เฉพาะ <b>20 ท่านแรก</b> ที่ชำระเงิน โดยทีมงานจะแจ้งและมอบให้หน้างาน · เงื่อนไขการใช้เป็นไปตามที่บริษัทกำหนด</li>
+        <li><b>ใบเสร็จรับเงิน/ใบกำกับภาษี</b> — จัดส่งทาง<b>ไปรษณีย์เท่านั้น</b> (ไม่มีรับหน้างาน) ตามชื่อ-ที่อยู่ที่ท่านกรอกไว้ในแบบฟอร์ม กรุณากรอกให้ถูกต้องครบถ้วน</li>
+        <li><b>ระยะเวลารับสมัคร</b> — ปิดรับลงทะเบียน <b>วันที่ 15 ตุลาคม 2569</b> หรือเมื่อที่นั่งเต็ม (แล้วแต่กรณีใดถึงก่อน)</li>
+        <li><b>ข้อมูลคอร์ส</b> — วัน เวลา สถานที่ และเนื้อหาเป็นไปตามที่ประกาศไว้ ทางสถาบันขอสงวนสิทธิ์ในการเปลี่ยนแปลงรายละเอียดตามความเหมาะสม โดยจะแจ้งให้ผู้ลงทะเบียนทราบล่วงหน้า</li>
+      </ol>
+
+      <h4 class="t-head">2. นโยบายความเป็นส่วนตัว (PDPA)</h4>
       <p>ข้าพเจ้ายินยอมให้ <b>บริษัท แลนด์ ฟอร์ โลน จำกัด</b> เก็บรวบรวม ใช้ และประมวลผลข้อมูลส่วนบุคคลที่ข้าพเจ้าให้ไว้ในการลงทะเบียน ได้แก่ ชื่อ–นามสกุล ข้อมูลสำหรับติดต่อ และข้อมูลอื่นที่จำเป็น เพื่อวัตถุประสงค์ในการลงทะเบียน ตรวจสอบข้อมูล และจัดทำ/ออกเอกสารที่เกี่ยวข้องกับการลงทะเบียน ตามกฎหมายคุ้มครองข้อมูลส่วนบุคคลที่เกี่ยวข้อง</p>
       <p>ข้าพเจ้ารับทราบว่า <b>บริษัท แลนด์ ฟอร์ โลน จำกัด</b> จะเก็บรักษาข้อมูลส่วนบุคคลดังกล่าวอย่างเหมาะสมและใช้ข้อมูลเท่าที่จำเป็นตามวัตถุประสงค์ที่แจ้งไว้ รวมถึงอาจเปิดเผยข้อมูลแก่ผู้ให้บริการหรือหน่วยงานที่เกี่ยวข้องเท่าที่จำเป็นและเป็นไปตามกฎหมาย</p>
       <p>ข้าพเจ้าได้อ่านและรับทราบ <b>นโยบายความเป็นส่วนตัว (Privacy Policy)</b> และเข้าใจสิทธิของเจ้าของข้อมูลส่วนบุคคลตามกฎหมาย รวมถึงสิทธิในการขอเข้าถึง แก้ไข ลบ หรือถอนความยินยอม ทั้งนี้ การถอนความยินยอมอาจส่งผลต่อการดำเนินการลงทะเบียนหรือการออกเอกสารในกรณีที่ข้อมูลดังกล่าวมีความจำเป็นต่อการดำเนินการ</p>
@@ -1121,10 +1219,17 @@ src="https://www.facebook.com/tr?id=2090864525136989&ev=PageView&noscript=1"
       <div class="ok-ico">✓</div>
       <h3 style="font-family:var(--display);font-weight:800;font-size:1.35rem;color:var(--ink);margin:0 0 6px">ลงทะเบียนสำเร็จ!</h3>
       <div class="ok-order" id="okOrderId"></div>
-      <p style="margin:12px 0 0;color:var(--ink-2)">ขอบคุณค่ะ 🙏 ทีมงานได้รับข้อมูลและสลิปของคุณเรียบร้อยแล้ว<br>เจ้าหน้าที่จะตรวจสอบและติดต่อกลับเพื่อยืนยันสิทธิ์ที่นั่ง</p>
+      <div class="ok-course">
+        <small>คอร์สสอนสด รุ่น 16</small>
+        <b>เสือนอนกินด้วยอสังหาฯ จำนอง–ขายฝาก</b>
+        <span>📅 เสาร์ที่ 17 ต.ค. 2569 · ลงทะเบียนหน้างาน 09.30–10.00 น. · เรียน 10.00–16.30 น.</span>
+        <span>📍 โรงแรมอมารี ดอนเมือง</span>
+      </div>
+      <p style="margin:14px 0 0;color:var(--ink-2)">ขอบคุณค่ะ 🙏 ทีมงานได้รับข้อมูลและสลิปของคุณเรียบร้อยแล้ว<br>เจ้าหน้าที่จะตรวจสอบและ<b>ติดต่อกลับทางอีเมลภายใน 2 วัน</b> เพื่อยืนยันสิทธิ์ที่นั่ง</p>
+      <p style="margin:8px 0 0;color:var(--ink-2);font-size:.86rem">📧 ระบบได้ส่งอีเมลสรุปการลงทะเบียนให้แล้ว — หากไม่พบ กรุณาตรวจกล่อง <b>Junk / Spam</b><br>🧾 ใบเสร็จ/ใบกำกับภาษี จัดส่ง<b>ทางไปรษณีย์เท่านั้น</b> ตามที่อยู่ที่กรอกไว้</p>
       <p style="margin:10px 0 0;color:var(--ink-2);font-size:.86rem">สอบถามเพิ่มเติม 📞 <a href="tel:0613739892" style="color:var(--red)">061-373-9892</a></p>
     </div>
-    <div class="modal-foot"><button type="button" onclick="document.getElementById('successModal').classList.remove('open');document.body.style.overflow='';">เรียบร้อย</button></div>
+    <div class="modal-foot"><button type="button" onclick="window.closeSuccess?window.closeSuccess():(document.getElementById('successModal').classList.remove('open'),document.body.style.overflow='');">เรียบร้อย</button></div>
   </div>
 </div>
 <script>
@@ -1150,10 +1255,48 @@ src="https://www.facebook.com/tr?id=2090864525136989&ev=PageView&noscript=1"
       PRICE=10593;
   if(!form||!btn) return;
 
-  /* โชว์ชื่อไฟล์เมื่อเลือกสลิป */
+  /* โชว์ชื่อไฟล์เมื่อเลือกสลิป (+ Pixel: AddPaymentInfo ครั้งแรกที่แนบสลิปสำเร็จ) */
+  var slipTracked=false;
   if(slip) slip.addEventListener('change',function(){
-    if(slip.files&&slip.files[0]){ slipLabel.textContent='✓ แนบสลิปแล้ว'; slipSub.textContent=slip.files[0].name; }
+    if(slip.files&&slip.files[0]){
+      slipLabel.textContent='✓ แนบสลิปแล้ว'; slipSub.textContent=slip.files[0].name;
+      if(!slipTracked){ slipTracked=true; window.pxTrack('AddPaymentInfo',{content_name:'คอร์สเสือนอนกิน รุ่น 16'}); }
+    }
     else { slipLabel.textContent='📎 คลิกเพื่อแนบสลิป'; slipSub.textContent='รองรับไฟล์ภาพ .jpg .png'; }
+  });
+
+  /* Pixel: AddToCart = เริ่มกรอกฟอร์มจริง (พิมพ์ช่องแรก) ยิงครั้งเดียวต่อการเข้าชม */
+  (function(){
+    var fired=false;
+    form.addEventListener('input',function(e){
+      if(fired) return;
+      var t=e.target;
+      if(!t || !(t.hasAttribute('data-f') || t.id==='fAddress')) return;
+      if(!String(t.value||'').trim()) return;
+      fired=true;
+      window.pxTrack('AddToCart',{content_name:'คอร์สเสือนอนกิน รุ่น 16',content_type:'product'});
+    });
+  })();
+
+  /* เปลี่ยน URL เป็น /thank-you ตอนลงทะเบียนสำเร็จ (ป๊อปอัพยังเด้งเหมือนเดิม)
+     เพื่อให้ทีมแอดตั้ง Custom Conversion แบบอิง URL ได้ · ปิดป๊อปอัพแล้วคืน URL เดิม */
+  var prevUrl = location.pathname + location.search;
+  function goThankYou(orderId){
+    try{
+      prevUrl = location.pathname + location.search;
+      history.pushState({ty:1}, '', '/thank-you' + (orderId ? '?order='+encodeURIComponent(orderId) : ''));
+    }catch(e){}
+  }
+  window.closeSuccess=function(){
+    var m=document.getElementById('successModal');
+    if(m) m.classList.remove('open');
+    document.body.style.overflow='';
+    try{ if(location.pathname.indexOf('/thank-you')===0) history.replaceState({}, '', prevUrl||'/'); }catch(e){}
+  };
+  /* กดปุ่มย้อนกลับของเบราว์เซอร์ตอนป๊อปอัพเปิดอยู่ -> ปิดป๊อปอัพ (URL กลับเองแล้ว) */
+  window.addEventListener('popstate',function(){
+    var m=document.getElementById('successModal');
+    if(m&&m.classList.contains('open')){ m.classList.remove('open'); document.body.style.overflow=''; }
   });
 
   function money(n){return n.toLocaleString('en-US')+'.-';}
@@ -1223,9 +1366,13 @@ src="https://www.facebook.com/tr?id=2090864525136989&ev=PageView&noscript=1"
         .then(function(res){
           setLoading(false);
           if(res&&res.ok){
+            /* เปลี่ยน URL เป็น /thank-you ก่อนยิง event เพื่อให้ event ติด URL นี้ไปด้วย */
+            goThankYou(res.orderId);
             /* Meta Pixel: ลงทะเบียนสำเร็จ = Purchase (มูลค่าจริงตามจำนวนที่นั่ง) */
             window.pxTrack('Purchase',{value:PRICE*seats,currency:'THB',
               content_name:'คอร์สเสือนอนกิน รุ่น 16',content_type:'product',num_items:seats});
+            /* PageView ซ้ำบน /thank-you — ให้ตั้ง Custom Conversion แบบอิง URL ได้ */
+            window.pxTrack('PageView');
             showSuccess(res.orderId);
           }
           else throw new Error(res&&res.error||'server');
