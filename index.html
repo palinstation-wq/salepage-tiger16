@@ -1331,9 +1331,15 @@ src="https://www.facebook.com/tr?id=2090864525136989&ev=PageView&noscript=1"
 </div>
 <script>
 (function(){
+  /* ▼▼▼ เปิด/ปิดป๊อปอัพโปรโมชั่น — แก้ได้ที่บรรทัดเดียวนี้ ▼▼▼
+     false = ไม่เด้ง  ← ใช้อยู่ตอนนี้ เพราะรูปในป๊อปอัพโปรโมท Voucher ซึ่งสิทธิ์หมดแล้ว
+     true  = เด้งตามปกติ
+     ⚠️ ก่อนเปิดใช้ใหม่ ต้องเปลี่ยนรูป assets/popup-promo.jpg ให้ตรงกับสิทธิ์ที่ให้จริงในรุ่นนั้น ๆ */
+  var SHOW_PROMO = false;
+
   var KEY='lflPromoSeen', DELAY=900;
   var ov=document.getElementById('promoModal');
-  if(!ov) return;
+  if(!ov || !SHOW_PROMO) return;
   var seen=false; try{ seen=sessionStorage.getItem(KEY)==='1'; }catch(e){}
   if(seen) return;                       /* เข้าชมรอบนี้เคยเห็นแล้ว ไม่รบกวนซ้ำ */
 
@@ -1594,15 +1600,32 @@ src="https://www.facebook.com/tr?id=2090864525136989&ev=PageView&noscript=1"
      ค่าเริ่มต้นในหน้าเว็บคือโหมดปกติ ถ้าเรียกข้อมูลไม่สำเร็จจะคงโหมดปกติไว้ (ไม่มีเลขปลอม) */
   (function(){
     var CAP=20, LOW_AT=8, CACHE_KEY='vchSeats', CACHE_MS=180000;
-    function apply(sold){
-      var remain=Math.max(0, CAP-sold);
-      var tier = remain===0 ? 'out' : (remain<=LOW_AT ? 'low' : 'normal');
+
+    /* ▼▼▼ ล็อกโหมด Voucher ด้วยมือ — แก้ได้ที่บรรทัดเดียวนี้ ▼▼▼
+       'out'    = สิทธิ์หมดแล้ว  ปิดการโปรโมท Voucher ทั้งหน้า  ← ใช้อยู่ตอนนี้ (ครบ 20 ที่แล้ว)
+       'low'    = เหลือน้อย      โชว์ "เหลือ X สิทธิ์สุดท้าย!"
+       'normal' = ยังมีสิทธิ์    โปรโมทปกติ ไม่โชว์ตัวเลข
+       'auto'   = ถามยอดจริงจากชีต (ช้า 10-15 วินาที เพราะ Apps Script ตอบช้า
+                  ระหว่างรอ หน้าเว็บจะโชว์โหมดปกติไปก่อน — จึงไม่ควรใช้ตอนสิทธิ์หมด) */
+    var MODE = 'out';
+
+    function setTier(tier, remain){
       if(tier==='normal') return;                       /* คงค่าเริ่มต้นในหน้า ไม่ต้องแตะ */
-      document.querySelectorAll('.vchN').forEach(function(n){ n.textContent=remain; });
+      if(typeof remain==='number'){
+        document.querySelectorAll('.vchN').forEach(function(n){ n.textContent=remain; });
+      }
       document.querySelectorAll('[data-vch]').forEach(function(el){
         el.hidden = el.getAttribute('data-vch').split(/\s+/).indexOf(tier) < 0;
       });
     }
+    function apply(sold){
+      var remain=Math.max(0, CAP-sold);
+      setTier(remain===0 ? 'out' : (remain<=LOW_AT ? 'low' : 'normal'), remain);
+    }
+
+    /* ล็อกโหมดไว้แล้ว -> สลับทันทีตอนโหลด ไม่ต้องรอเซิร์ฟเวอร์ */
+    if(MODE!=='auto'){ setTier(MODE); return; }
+
     /* โหมดพรีวิว: ใส่ ?vch=<จำนวนที่สมัครแล้ว> ท้าย URL เพื่อดูหน้าตาแต่ละระยะ
        ใช้ได้เฉพาะตอนเปิดจากเครื่องตัวเอง (localhost) — บนเว็บจริงจะไม่ทำงาน */
     if(/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname)){
